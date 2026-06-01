@@ -8,7 +8,6 @@ const Hero = () => {
       </div>
       <p className="hero-eyebrow">Full-Stack Software Engineer</p>
       <h1 className="hero-name">Jamie<br/><em>Spencer</em></h1>
-      <h3 className="hero-name"><em>Is this thing on?</em></h3>
       <p className="hero-tagline">
         <strong>I build things :P</strong> Most of my experience comes from internships and personal projects where I’ve had to jump into unfamiliar codebases, figure things out quickly, and keep learning as I go. I enjoy working across the stack and understanding how all the pieces fit together.
       </p>
