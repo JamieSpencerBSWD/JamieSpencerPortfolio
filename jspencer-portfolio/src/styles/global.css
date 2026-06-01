@@ -571,6 +571,8 @@ footer {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  animation: fadeUp 0.7s 0.35s ease forwards;
+  animation: fadeIn 1s 1.2s ease forwards;
 }
 .reveal.visible { opacity: 1; transform: none; }
 .reveal-delay-1 { transition-delay: 0.1s; }

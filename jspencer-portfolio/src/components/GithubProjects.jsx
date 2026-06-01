@@ -19,10 +19,11 @@ const GithubProjects = () => {
   }, []);
 
   return (
-    <section>
+    <div>
+    <section id='recent-projects'>
       <h2>Recent Projects</h2>
 
-      <div className="projects-grid">
+      <div className="projects-grid reveal">
         {repos.slice(0, 6).map((repo) => (
           <a
             key={repo.id}
@@ -30,6 +31,7 @@ const GithubProjects = () => {
             target="_blank"
             rel="noreferrer"
             className="project-card"
+            style={{color:"#e6edf3"}}
           >
             <h3>{repo.name}</h3>
 
@@ -45,6 +47,8 @@ const GithubProjects = () => {
         ))}
       </div>
     </section>
+    <div className="section-divider"></div>
+    </div>
   );
 }
 
