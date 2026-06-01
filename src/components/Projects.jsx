@@ -17,7 +17,7 @@ const Projects = () => {
           <p className="project-summary">
             ShadeBase is a full-stack color palette and accessibility platform that grew far beyond its original scope.
           </p>
-          <p>What started as a simple palette management project evolved into a tool for contrast checking, colorblindness simulation, blend mode previews, and palette sharing. Along the way it became one of the projects that taught me the most about designing larger applications.</p>
+          <p>What started as a simple palette management project evolved into a tool for contrast checking, colorblindness simulation, blend mode previews, and palette sharing. Along the way it became one of the projects that taught me the most about designing larger applications, and its still a project I like to come back to from time to time.</p>
           <div className="project-tags">
             <span className="project-tag">React</span>
             <span className="project-tag">Node.js</span>

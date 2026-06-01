@@ -1,4 +1,5 @@
 import React from 'react'
+import { hero } from '../data/heroContent'
 
 const Hero = () => {
   return (
@@ -6,10 +7,10 @@ const Hero = () => {
       <section id="hero">
       <div className="hero-bg-circle">
       </div>
-      <p className="hero-eyebrow">Full-Stack Software Engineer</p>
-      <h1 className="hero-name">Jamie<br/><em>Spencer</em></h1>
+      <p className="hero-eyebrow">{hero.title}</p>
+      <h1 className="hero-name">{hero.firstName}<br/><em>{hero.lastName}</em></h1>
       <p className="hero-tagline">
-        <strong>I build things :P</strong> Most of my experience comes from internships and personal projects where I’ve had to jump into unfamiliar codebases, figure things out quickly, and keep learning as I go. I enjoy working across the stack and understanding how all the pieces fit together.
+        <strong>{hero.tagline}</strong><p>{hero.description}</p>
       </p>
       <div className="hero-ctas">
         <a href="#projects" className="btn btn-primary">
