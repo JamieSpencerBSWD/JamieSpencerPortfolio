@@ -21,7 +21,7 @@ const GithubProjects = () => {
   return (
     <div>
     <section id='recent-projects'>
-      <p className="section-label reveal">Recent Projects</p>
+      <p className="section-label reveal">Recent Repositories</p>
       <h2 className="section-title reveal reveal-delay-1">What I've Been Working On Lately</h2>
 
       <div className="skills-grid">
