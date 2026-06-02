@@ -1,4 +1,5 @@
 import React from 'react'
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Projects = () => {
   return (
@@ -18,25 +19,20 @@ const Projects = () => {
             ShadeBase is a full-stack color palette and accessibility platform that grew far beyond its original scope.
           </p>
           <p>What started as a simple palette management project evolved into a tool for contrast checking, colorblindness simulation, blend mode previews, and palette sharing. Along the way it became one of the projects that taught me the most about designing larger applications, and its still a project I like to come back to from time to time.</p>
-          <div className="project-tags">
-            <span className="project-tag">React</span>
-            <span className="project-tag">Node.js</span>
-            <span className="project-tag">Express</span>
-            <span className="project-tag">MongoDB</span>
-            <span className="project-tag">REST API</span>
-            <span className="project-tag">JWT Auth</span>
+          <br/>
+          <div className="skill-group-label">Technologies</div>
+          <div className="skill-tags">
+            <span className="skill-tag">React</span>
+            <span className="skill-tag">Node.js</span>
+            <span className="skill-tag">Express</span>
+            <span className="skill-tag">MongoDB</span>
+            <span className="skill-tag">REST API</span>
+            <span className="skill-tag">JWT Auth</span>
           </div>
           <div className="project-links">
             <a href="https://github.com/JamieSpencerBSWD/ShadeBase"
                target="_blank" rel="noreferrer" className="project-link">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" strokeWidth="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
-                         c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77
-                         5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0
-                         C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78
-                         c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
+              <GitHubIcon/>
               GitHub
             </a>
           </div>
@@ -69,13 +65,15 @@ const Projects = () => {
           <p className="project-num">02</p>
           <h3 className="project-name">PocketDex</h3>
           <p className="project-summary">
-            PocketDex is a React application built around the PokéAPI that allows users to browse, search, and explore Pokémon data through a clean interface. The project focuses on routing, asynchronous data fetching, and creating an experience that feels responsive despite relying entirely on external API data.
+            PocketDex is a React application built during my final semester of college focusing around the PokéAPI that allows users to browse, search, and explore Pokémon data through a clean interface. The project focuses on routing, asynchronous data fetching, and creating an experience that feels responsive despite relying entirely on external API data.
           </p>
-          <div className="project-tags">
-            <span className="project-tag">React</span>
-            <span className="project-tag">JavaScript</span>
-            <span className="project-tag">REST API</span>
-            <span className="project-tag">Dynamic Routing</span>
+          <br/>
+          <div className="skill-group-label">Technologies</div>
+          <div className="skill-tags">
+            <span className="skill-tag">React</span>
+            <span className="skill-tag">JavaScript</span>
+            <span className="skill-tag">REST API</span>
+            <span className="skill-tag">Dynamic Routing</span>
           </div>
         </div>
         <p className="project-detail-label">Engineering Focus</p>
@@ -85,14 +83,7 @@ const Projects = () => {
         <div className="project-links">
           <a href="https://github.com/JamieSpencerBSWD/PocketDex"
              target="_blank" rel="noreferrer" className="project-link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" strokeWidth="2">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
-                       c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77
-                       5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0
-                       C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78
-                       c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
+            <GitHubIcon/>
             GitHub
           </a>
         </div>
@@ -106,11 +97,13 @@ const Projects = () => {
           <p className="project-summary">
             The Job Application Tracker is a full-stack application designed to help organize and analyze the job search process. Instead of treating applications as rows in a spreadsheet, the platform stores structured data that can be searched, filtered, tagged, and eventually analyzed to identify patterns and trends.
           </p>
-          <div className="project-tags">
-            <span className="project-tag">Node.js</span>
-            <span className="project-tag">Express</span>
-            <span className="project-tag">PostgreSQL</span>
-            <span className="project-tag">REST API</span>
+          <br/>
+          <div className="skill-group-label">Technologies</div>
+          <div className="skill-tags">
+            <span className="skill-tag">Node.js</span>
+            <span className="skill-tag">Express</span>
+            <span className="skill-tag">PostgreSQL</span>
+            <span className="skill-tag">REST API</span>
           </div>
         </div>
         <p className="project-detail-label">Engineering Focus</p>
@@ -124,14 +117,7 @@ const Projects = () => {
         <div className="project-links">
           <a href="https://github.com/JamieSpencerBSWD/JobTracker"
              target="_blank" rel="noreferrer" className="project-link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" strokeWidth="2">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
-                       c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77
-                       5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0
-                       C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78
-                       c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
+            <GitHubIcon/>
             GitHub
           </a>
         </div>

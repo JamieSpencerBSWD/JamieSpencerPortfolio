@@ -21,29 +21,24 @@ const GithubProjects = () => {
   return (
     <div>
     <section id='recent-projects'>
-      <h2>Recent Projects</h2>
+      <p className="section-label reveal">Recent Projects</p>
+      <h2 className="section-title reveal reveal-delay-1">What I've Been Working On Lately</h2>
 
-      <div className="projects-grid reveal">
+      <div className="skills-grid">
         {repos.slice(0, 6).map((repo) => (
-          <a
-            key={repo.id}
-            href={repo.html_url}
-            target="_blank"
-            rel="noreferrer"
-            className="project-card"
-            style={{color:"#e6edf3"}}
-          >
-            <h3>{repo.name}</h3>
-
-            <p>
-              {repo.description || "No description provided."}
-            </p>
-
-            <div>
-              <span>{repo.language}</span>
-              <span>⭐ {repo.stargazers_count}</span>
+          <div className="skill-group reveal reveal-delay-1" key={repo.id}>
+            <p>{repo.name} - {repo.description} - {repo.language} - {repo.stargazers_count}</p>
+            <div className="skill-group-label">Frontend</div>
+            <div className="skill-tags">
+              <span className="skill-tag primary">React</span>
+              <span className="skill-tag primary">TypeScript</span>
+              <span className="skill-tag primary">JavaScript</span>
+              <span className="skill-tag">Angular</span>
+              <span className="skill-tag">Vue</span>
+              <span className="skill-tag">HTML</span>
+              <span className="skill-tag">CSS</span>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </section>
