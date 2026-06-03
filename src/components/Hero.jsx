@@ -15,9 +15,9 @@ const Hero = () => {
 
       <h1 className="hero-name">{hero.firstName}<br/><em>{hero.lastName}</em></h1>
 
-      <p className="hero-tagline">
-        <strong>{hero.tagline}</strong><p>{hero.description}</p>
-      </p>
+      <div className="hero-tagline">
+        <i><strong>{hero.tagline}</strong></i><br/><br/><p>{hero.description}</p>
+      </div>
 
       <div className="hero-ctas">
         <a href="#projects" className="btn btn-primary">

@@ -2,7 +2,17 @@ import React, { useState, useEffect } from 'react'
 
 const GithubProjects = () => {
   const [repos, setRepos] = useState([]);
-
+  const [repoLanguages, setRepoLanguages] = useState([])
+  
+  const fetchLanguages = (languagesURL) => {
+    fetch(languagesURL)
+      .then((res) => res.json())
+      .then((data) => {
+          setRepoLanguages(prev => [...prev, data])
+      });
+    console.log("Repo Languages",repoLanguages)
+  }
+  
   useEffect(() => {
     fetch("https://api.github.com/users/JamieSpencerBSWD/repos")
       .then((res) => res.json())
@@ -13,9 +23,18 @@ const GithubProjects = () => {
             (a, b) =>
               new Date(b.updated_at) - new Date(a.updated_at)
           );
-
+          
+          
         setRepos(filtered);
-      });
+        
+      })
+      // .then(repos.slice(0, 7).forEach(repo => {
+      //       fetchLanguages(repo.languages_url);
+      //     }))
+          ;
+
+      //Each repo, has this: https://api.github.com/repos/JamieSpencerBSWD/{repository}/languages
+      // which shows the technologies and languages used. For each repo, grab that url, fetch the languages and map through them
   }, []);
 
   return (
@@ -28,15 +47,16 @@ const GithubProjects = () => {
         {repos.slice(0, 6).map((repo) => (
           <div className="skill-group reveal reveal-delay-1" key={repo.id}>
             <p>{repo.name} - {repo.description} - {repo.language} - {repo.stargazers_count}</p>
-            <div className="skill-group-label">Frontend</div>
+            <div className="skill-group-label">Technologies Used</div>
             <div className="skill-tags">
-              <span className="skill-tag primary">React</span>
-              <span className="skill-tag primary">TypeScript</span>
-              <span className="skill-tag primary">JavaScript</span>
-              <span className="skill-tag">Angular</span>
-              <span className="skill-tag">Vue</span>
-              <span className="skill-tag">HTML</span>
-              <span className="skill-tag">CSS</span>
+              {
+                // repoLanguages.slice(0,6).map((repository) => (
+                //   repository.map((language) => (
+                //     <span className="skill-tag">{language}</span>
+                //   ))
+                // ))
+                // Map through each object in repolanguages, and display each technology in the skill-tag span element
+              }              
             </div>
           </div>
         ))}
