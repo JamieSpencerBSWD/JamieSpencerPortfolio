@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react'
 
 const GithubProjects = () => {
   const [repos, setRepos] = useState([]);
-  const [repoLanguages, setRepoLanguages] = useState([])
+  //const [repoLanguages, setRepoLanguages] = useState([])
   
-  const fetchLanguages = (languagesURL) => {
-    fetch(languagesURL)
-      .then((res) => res.json())
-      .then((data) => {
-          setRepoLanguages(prev => [...prev, data])
-      });
-    console.log("Repo Languages",repoLanguages)
-  }
+  // const fetchLanguages = (languagesURL) => {
+  //   fetch(languagesURL)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //         setRepoLanguages(prev => [...prev, data])
+  //     });
+  //   console.log("Repo Languages",repoLanguages)
+  // }
   
   useEffect(() => {
     fetch("https://api.github.com/users/JamieSpencerBSWD/repos")
