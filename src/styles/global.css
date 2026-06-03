@@ -76,7 +76,7 @@ body::before {
    NAV
    ============================================================ */
 nav {
-  position: fixed;
+  position: sticky;
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 1rem 2rem;
@@ -88,6 +88,7 @@ nav {
   background: rgba(13,17,23,0.7);
   border-bottom: 1px solid var(--border);
   transition: all 0.3s ease;
+  max-width: 100%;
 }
 @media (prefers-color-scheme: light) {
   nav { background: rgba(244,241,235,0.75); }
@@ -119,26 +120,39 @@ nav {
   cursor: pointer;
   font-size: 1.4rem;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .nav-links {
     display: none;
     flex-direction: column;
+
     position: absolute;
-    top: 100%; left: 0; right: 0;
+    top: 100%;
+    right: 1rem;
+
+    width: 220px;
+
     background: var(--bg-card);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 1rem;
     gap: 1rem;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
-  .nav-links.open { display: flex; }
+
+  .nav-links.open {
+    display: flex;
+  }
   .nav-toggle { display: block; }
 }
+
 
 /* ============================================================
    LAYOUT
    ============================================================ */
 main { position: relative; z-index: 1; }
-section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+section { width: 100%; padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
 .section-label {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -387,7 +401,7 @@ h1.hero-name em {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-@media (max-width: 700px) { .project-card.featured { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .project-card.featured { grid-template-columns: 1fr; } }
 .project-meta { margin-bottom: 1rem; }
 .project-num {
   font-family: var(--font-mono);
@@ -463,7 +477,25 @@ h1.hero-name em {
   position: relative;
 }
 .exp-item:first-child { border-top: 1px solid var(--border); }
-@media (max-width: 600px) { .exp-item { grid-template-columns: 1fr; gap: 1rem; } }
+.education-divider {
+  flex-shrink: 0;
+}
+@media (max-width: 600px) { 
+  .exp-item { grid-template-columns: 1fr; gap: 1rem; }
+   .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-card .divider {
+    width: 100%;
+    height: 1px;
+  }
+  .education-divider {
+    width: 100% !important;
+    height: 1px !important;
+  }
+}
 .exp-company {
   font-family: var(--font-head);
   font-size: 1.25rem;
@@ -571,7 +603,6 @@ footer {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  animation: fadeUp 0.7s 0.35s ease forwards;
   animation: fadeIn 1s 1.2s ease forwards;
 }
 .reveal.visible { opacity: 1; transform: none; }

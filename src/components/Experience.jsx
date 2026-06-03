@@ -91,9 +91,11 @@ const Experience = () => {
     </div>
 
     {/* <!-- Education --> */}
-    <div className="reveal" style={{marginTop: "2.5rem", padding: "1.5rem",
+    <div className="reveal education-card" 
+    style={{marginTop: "2.5rem", padding: "1.5rem",
          background:"#161b22", border: "1px solid rgba(255,255,255,0.08)",
-         borderRadius: "10px", display: "flex", alignItems: "center", gap: "1.5rem"}}>
+         borderRadius: "10px", display: "flex", alignItems: "center", gap: "1.5rem"}}
+         >
       <div style={{flexShrink: "0"}}>
         <div style={{fontFamily:"JetBrains Mono, ui-monospace", fontSize:"0.68rem", letterSpacing:"0.12em",
                     color:"#4da3ff", textTransform:"uppercase", marginBottom:"0.3rem"}}>
@@ -104,7 +106,7 @@ const Experience = () => {
           B.S. Web Design &amp; Development · Oct 2020 – May 2024
         </div>
       </div>
-      <div style={{flexShrink:"0", height:"50px", width:"1px", background:"rgba(255,255,255,0.08)"}}></div>
+      <div className='education-divider' style={{flexShrink:"0", height:"50px", width:"1px", background:"rgba(255,255,255,0.08)"}}></div>
       <div style={{fontSize:"0.9rem", color:"#8b949e", lineHeight:"1.6"}}>
         Neumont's project-heavy curriculum meant graduating with a portfolio of real systems rather
         than toy exercises — and three internships alongside my degree.
